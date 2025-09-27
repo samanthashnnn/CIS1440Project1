@@ -1,0 +1,140 @@
+:root{
+    --darkbg: #02036b;
+    --darkbglighttext: #ebfffd;
+    --lightbg: #d4feff;
+    --lighbgdarktext: #000033;
+    --shadowblue: #6c6dfb;
+
+
+    --bgcolorone:#BF9E75;
+    --bgcolortwo: #F2E0BD;
+    --lightblue:#6DA6A0;
+    --textcolor:#0D0D0D;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: var(--darkbglighttext);
+}
+
+body{
+    width:100%;
+    margin: 24px auto;
+}
+
+
+/*header styles*/
+header{
+    width: 80vw;
+    margin: auto;
+    height: 200px;
+    position: relative;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    width: 70vw;
+    margin: 0 0 0 auto;
+}
+
+.heading{
+    background-color: var(--darkbg);
+    color: var(--darkbglighttext);
+    height: 100px;
+    margin-top: 2%;
+    text-align: right;
+    width:100%;
+    padding-right: 35px;
+    padding-bottom: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 0;
+}
+
+header h1{
+    font-size: 3em;
+    margin: 10px 0 0 0; 
+}
+
+header p{
+    margin: 1px 0 0 0; 
+    
+}
+
+header img{
+    width: 250px;
+    height: auto;
+    position: absolute;
+    right: 70%;
+    top: -10%;
+    z-index: 1;
+}
+
+/*nav in header*/
+nav{
+    position:relative;
+    z-index: 2;
+
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 35px;
+    margin-top: 10px;
+}
+
+nav li{
+    list-style-type: none;
+    margin-left: 5px;
+    
+}
+
+nav li a{
+    text-decoration: none;
+    color: var(--darkbg);
+    font-weight: bolder;
+    font-size: 1.5em;
+    background-color: var(--darkbglighttext);
+    border-radius: 5px;
+    padding: 4px;
+    box-shadow: 3px 3px 5px var(--lighbgdarktext);
+}
+nav li a:hover{
+    
+}
+nav li a:visited{
+    
+}
+
+/*body styles*/
+table{
+    border-collapse: collapse;
+}
+
+table thead{
+    background-color: var(--darkbg);
+    color: var(--darkbglighttext);
+    height:2em;
+}
+table tbody{
+    background-color: var(--lightbg);
+}
+td{
+    padding:10px;
+    font-size: 1.5em;
+}
+
+table span{
+    font-size: 1rem;
+    font-style: italic;
+}
+

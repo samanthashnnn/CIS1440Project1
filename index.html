@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=viewportwidth, initialscale=1.0" >
+        <title></title>
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <img src="images/logo.png" alt="darling brew logo featuring peter pan flying over
+                the london skyline">
+
+                <div class="heading">
+                    <h1>the darling brew</h1>
+                    <p>where books take flight and coffee never grows cold</p>
+                </div>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="index.html#pickup">curbside</a></li>
+                    <li><a href="party">host your party</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="menu">
+                <h2>menu</h2>
+                <table border="1">
+                    <col class="itemName">
+                    <col class="itemDesc">
+                    <col class="itemPrice">
+                    <thead>
+                        <tr>
+                            <th colspan="3">tea</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>nana's nightcap</td>
+                            <td><span>chamomile and spearmint</span></td>
+                            <td>$2.50</td>
+                        </tr>
+                        <tr>
+                            <td>darling darjeeling</td>
+                            <td><span>sweet & fruity</span></td>
+                            <td>$5.20</td>
+                        </tr>
+                        <tr>
+                            <td>matcha smee latte</td>
+                            <td><span>matcha with a blush of strawberry</span></td>
+                            <td>$5.50</td>
+                        </tr>
+                        <tr>
+                            <td>berry never after</td>
+                            <td><span>berry flavored iced tea</span></td>
+                            <td>$4.00</td>
+                        </tr>
+                        <tr>
+                            <td>second starberry</td>
+                            <td><span>strawberry lemonade</span></td>
+                            <td>$4.00</td>
+                        </tr>
+                        <tr>
+                            <td>never-ending chai</td>
+                            <td><span></span></td>
+                            <td>$4.00</td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th colspan="3">coffee</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>crocodile cold brew</td>
+                            <td><span>long, cold steep</span></td>
+                            <td>$4.50</td>
+                        </tr>
+                        <tr>
+                            <td>kisspresso</td>
+                            <td ><span>tiny yet mighty</span></td>
+                            <td>$2.50</td>
+                        </tr>
+                        <tr>
+                            <td>wendy's wake-up</td>
+                            <td><span>morning drip coffee</span></td>
+                            <td>$2.50</td>
+                        </tr>
+                        <tr>
+                            <td>neverland nitro</td>
+                            <td><span>creamy cold brew</span></td>
+                            <td>$5.50</td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th colspan="3">peter pan-ninis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="pickup">
+                <form action="#" method="post">
+                    <section>
+                    <h2>schedule pick-up of your favorite pick-me-up drink/book!</h2>
+                        <label>
+                            name:
+                            <input type="text" id="name" required>
+                        </label><br>
+                        <label>
+                            email:
+                            <input type="email" id="email" required>
+                        </label><br>
+                        <label>
+                            pickup time:
+                            <!--date & time picker-->
+                        </label>
+                        <label>
+                            drink:
+                            <!--drink dropdown-->
+                        </label>
+                        <label>
+                            snack:
+                            <!--snack dropdown-->
+                        </label>
+                        <label>
+                            book:
+                            <!--book dropdown-->
+                        </label>
+                        <input type="submit" value="reserve pickup">
+                    </section>
+                </form>
+            </section>
+
+            <section id="party">
+                <form action="#" method="post">
+                    <section>
+                        <h2>schedule a party</h2>
+                        <label>
+                            name:
+                            <input type="text" id="name" required>
+                        </label><br>
+                        <label>
+                            email:
+                            <input type="email" id="email" required>
+                        </label><br>
+                        <label>
+                            party time:
+                            <!--date & time picker-->
+                        </label>
+                        <label>
+                            number in party:
+                            <!--radio or dropdown-->
+                        </label>
+                        <label>
+                            book theme:
+                            <!--book dropdown-->
+                        </label>
+                        <label>
+                            <!--checkbox-->
+                            i have read the party rules
+                        </label>
+                        <input type="submit" value="party!">
+                    </section>
+                </form>
+            </section>
+
+        </main>
+        <footer>
+            <p>&copy; 2025 The Darling Brew | Contact | Privacy Policy</p>
+        </footer>
+    </body>
+</html>
