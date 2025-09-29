@@ -23,13 +23,78 @@
                     <li><a href="#">home</a></li>
                     <li><a href="#">menu</a></li>
                     <li><a href="index.html#pickup">curbside</a></li>
-                    <li><a href="party">host your party</a></li>
+                    <li><a href="party">parties</a></li>
                     <li><a href="#">contact</a></li>
                 </ul>
             </nav>
         </header>
         <main>
-            <section class="menu">
+            <section id="forms">
+                <section id="pickup">
+                    <form action="#" method="post">
+                      
+                        <h2>pick-up drink/book!</h2>
+                            <label>
+                                name:
+                                <input type="text" id="name" required>
+                           </label><br>
+                            <label>
+                                email:
+                                <input type="email" id="email" required>
+                            </label><br>
+                            <label>
+                                pickup time:
+                                <!--date & time picker-->
+                            </label>
+                            <label>
+                                drink:
+                                <!--drink dropdown-->
+                            </label>
+                            <label>
+                                snack:
+                                <!--snack dropdown-->
+                            </label>
+                            <label>
+                                book:
+                                <!--book dropdown-->
+                            </label>
+                            <input type="submit" value="reserve pickup">
+                    </form>
+                </section>
+
+                <section id="party">
+                    <form action="#" method="post">
+                    
+                            <h2>schedule a party</h2>
+                            <label>
+                                name:
+                                <input type="text" id="name" required>
+                            </label><br>
+                            <label>
+                                email:
+                                <input type="email" id="email" required>
+                            </label><br>
+                            <label>
+                                party time:
+                                <!--date & time picker-->
+                            </label>
+                            <label>
+                                number in party:
+                                <!--radio or dropdown-->
+                            </label>
+                            <label>
+                                book theme:
+                                <!--book dropdown-->
+                            </label>
+                            <label>
+                                <!--checkbox-->
+                                i have read the party rules
+                            </label>
+                            <input type="submit" value="party!">
+                    </form>
+                </section>
+            </section>   
+             <section class="menu">
                 <h2>menu</h2>
                 <table border="1">
                     <col class="itemName">
@@ -123,72 +188,7 @@
                     </tbody>
                 </table>
             </section>
-            <section id="pickup">
-                <form action="#" method="post">
-                    <section>
-                    <h2>schedule pick-up of your favorite pick-me-up drink/book!</h2>
-                        <label>
-                            name:
-                            <input type="text" id="name" required>
-                        </label><br>
-                        <label>
-                            email:
-                            <input type="email" id="email" required>
-                        </label><br>
-                        <label>
-                            pickup time:
-                            <!--date & time picker-->
-                        </label>
-                        <label>
-                            drink:
-                            <!--drink dropdown-->
-                        </label>
-                        <label>
-                            snack:
-                            <!--snack dropdown-->
-                        </label>
-                        <label>
-                            book:
-                            <!--book dropdown-->
-                        </label>
-                        <input type="submit" value="reserve pickup">
-                    </section>
-                </form>
-            </section>
-
-            <section id="party">
-                <form action="#" method="post">
-                    <section>
-                        <h2>schedule a party</h2>
-                        <label>
-                            name:
-                            <input type="text" id="name" required>
-                        </label><br>
-                        <label>
-                            email:
-                            <input type="email" id="email" required>
-                        </label><br>
-                        <label>
-                            party time:
-                            <!--date & time picker-->
-                        </label>
-                        <label>
-                            number in party:
-                            <!--radio or dropdown-->
-                        </label>
-                        <label>
-                            book theme:
-                            <!--book dropdown-->
-                        </label>
-                        <label>
-                            <!--checkbox-->
-                            i have read the party rules
-                        </label>
-                        <input type="submit" value="party!">
-                    </section>
-                </form>
-            </section>
-
+                
         </main>
         <footer>
             <p>&copy; 2025 The Darling Brew | Contact | Privacy Policy</p>
