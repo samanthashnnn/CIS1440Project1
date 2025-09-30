@@ -33,31 +33,73 @@
                 <section id="pickup">
                     <form action="#" method="post">
                       
-                        <h2>pick-up drink/book!</h2>
+                        <h2>blind date with a book</h2>
                             <label>
                                 name:
                                 <input type="text" id="name" required>
-                           </label><br>
+                            </label>
                             <label>
-                                email:
-                                <input type="email" id="email" required>
-                            </label><br>
+                                phone: 
+                                <input type="tel">
+                            </label>
                             <label>
                                 pickup time:
                                 <!--date & time picker-->
+                                <input type="datetime-local">
                             </label>
                             <label>
                                 drink:
                                 <!--drink dropdown-->
+                                <select name="drink">
+                                    <option>select your drink</option>
+                                    <optgroup label="tea">
+                                        <option>nana's nightcap</option>
+                                        <option>darling darjeeling</option>
+                                        <option>matcha smee blush</option>
+                                        <option>berry never after</option>
+                                        <option>second starberry to the right</option>
+                                        <option>faith, trust,and spiced chai</option>                                 
+                                    </optgroup>
+                                    <optgroup label="coffee">
+                                        <option>crocodile cold brew</option>
+                                        <option>kisspresso</option>
+                                        <option>wendy's wake-up</option>
+                                        <option>neverland nitro</option>
+                                    </optgroup>    
+                                </select>
                             </label>
                             <label>
-                                snack:
+                                food:
                                 <!--snack dropdown-->
+                                <select name="food">
+                                    <option>pick your panini</option>
+                                    <option>tinker toastie</option>
+                                    <option>lost grills</option>
+                                    <option>wendy melt</option>
+                                </select>
                             </label>
-                            <label>
-                                book:
-                                <!--book dropdown-->
-                            </label>
+                            <!--number of books needed-->
+                            <section id="bookSelection">
+                                <label>
+                                    select what genre of book you'd like:
+                                    <label>
+                                        <input type="radio">
+                                        children's
+                                    </label>
+                                    <label>
+                                        <input type="radio">
+                                        teen
+                                    </label>
+                                    <label>
+                                        <input type="radio">
+                                        adult fiction
+                                    </label>
+                                    <label>
+                                        <input type="radio">
+                                        adult non-fiction
+                                    </label>
+                                </label>
+                            </section>
                             <input type="submit" value="reserve pickup">
                     </form>
                 </section>
@@ -69,26 +111,29 @@
                             <label>
                                 name:
                                 <input type="text" id="name" required>
-                            </label><br>
+                            </label>
                             <label>
                                 email:
                                 <input type="email" id="email" required>
-                            </label><br>
+                            </label>
                             <label>
                                 party time:
                                 <!--date & time picker-->
+                                <input type="datetime-local">
                             </label>
                             <label>
                                 number in party:
-                                <!--radio or dropdown-->
+                                <!-- dropdown-->
+                                <input type="number" min="5" max="45">
                             </label>
                             <label>
-                                book theme:
-                                <!--book dropdown-->
+                                theme request:
+                                <input type="text">
                             </label>
-                            <label>
+                            <label name="rulesCheck">
                                 <!--checkbox-->
-                                i have read the party rules
+                                <input type="checkbox" required>
+                                i have read and agree to the <a href="rooms.html"> party rules</a>
                             </label>
                             <input type="submit" value="party!">
                     </form>
@@ -117,7 +162,7 @@
                             <td>$5.20</td>
                         </tr>
                         <tr>
-                            <td>matcha smee latte</td>
+                            <td>matcha smee blush</td>
                             <td><span>matcha with a blush of strawberry</span></td>
                             <td>$5.50</td>
                         </tr>
@@ -127,12 +172,12 @@
                             <td>$4.00</td>
                         </tr>
                         <tr>
-                            <td>second starberry</td>
+                            <td>second starberry to the right</td>
                             <td><span>strawberry lemonade</span></td>
                             <td>$4.00</td>
                         </tr>
                         <tr>
-                            <td>never-ending chai</td>
+                            <td>faith, trust, and spiced chai</td>
                             <td><span></span></td>
                             <td>$4.00</td>
                         </tr>
@@ -181,19 +226,19 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>tinker toastie</td>
+                            <td><span>mascarpone, strawberries and honey drizzle on brioche</span></td>
+                            <td>7.80</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>lost grills</td>
+                            <td><span>grilled havarti cheese on sourdough</span></td>
+                            <td>7.80</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>wendy melt</td>
+                            <td><span>grilled chese with turkey on rye</span></td>
+                            <td>7.80</td>
                         </tr>
                     </tbody>
                 </table>
@@ -201,7 +246,7 @@
                 
         </main>
         <footer>
-            <p>&copy; 2025 The Darling Brew | Contact | Privacy Policy</p>
+            <p><a href="index.html">&copy; 2025 The Darling Brew</a> | <a href="contact.html">Contact</a> | <a href="rooms.html">Room Policy</a></p>
         </footer>
     </body>
 </html>

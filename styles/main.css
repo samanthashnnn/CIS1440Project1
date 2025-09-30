@@ -3,7 +3,8 @@
     --darkbglighttext: #fff6f0;
     --lightbg: #f4ab6c;
     --lightbgdarktext: #000033;
-    --shadow: #dd1f13;
+    --shadow: #dd1f13; 
+    --formbackground: #fffcfa;
 
 
     --bgcolorone:#BF9E75;
@@ -106,12 +107,14 @@ nav li a{
     color: var(--darkbg);
     font-weight: bolder;
     font-size: 1.5em;
-    background-color: var(--darkbglighttext);
+    background-color: var(--formbackground);
     border-radius: var(--borrad);
     padding: 8px;
     box-shadow: 3px 3px 5px var(--shadow);
 }
 nav li a:hover{
+       background-color: var(--shadow);
+    color: var(--formbackground);
     
 }
 nav li a:visited{
@@ -138,32 +141,66 @@ h2{
 }
 
 #forms{
-    justify-content: left;
-
+    width: 30vw;
 }
 
 form{
-    margin: 35px auto;
-    border:1px solid var(--darkbg);
+    margin: 35px 0;
+    border:4px double var(--darkbg);
     border-radius: var(--borrad);
+    background-color: var(--formbackground);
+}
+
+form h2{
+    margin:12px auto;
+    width: fit-content;
 
 }
 
-form input[type=submit]{
+#bookSelection{
+    background-color: var(--darkbglighttext);
+    width:fit-content;
+    margin: auto;
+    border: 1px solid var(--shadow);
+    border-radius: var(--borrad);
+}
+
+form input[type=submit] {
        color: var(--darkbg);
     font-weight: bolder;
-    font-size: .75em;
+    font-size: 1em;
     background-color: var(--darkbglighttext);
     border-radius: var(--borrad);
-    padding: 8px;
+    padding: 12px;
     box-shadow: 3px 3px 5px var(--shadow);
-    margin:10px;
+    margin: 15px ;
     border: 1px solid var(--shadow);
+}
+
+form input[type=submit]:hover {
+    background-color: var(--shadow);
+    color: var(--formbackground);
+}
+
+form input[type=checkbox]:hover{
+    box-shadow: 1px 1px 3px var(--shadow);
+}
+
+
+
+form label input{
+    background-color: var(--darkbglighttext);
+    border-radius: var(--borrad);
+    border: 1px solid var(--shadow);
+}
+
+label[name="rulesCheck"]{
+    font-style: italic;
 }
 
 label{
     display: block;
-    margin-top: 10px;
+    margin: 20px;
 }
 
 /*table styles*/
@@ -174,6 +211,7 @@ label{
 
 .menu{
 margin-left: auto;
+margin-top: 35px;
 }
 
 table{
@@ -182,34 +220,58 @@ table{
 }
 
 table thead{
-    background-color: var(--darkbg);
     color: var(--darkbg);
     font-size:2em;
     padding:100px;
-
-
 }
 
 th{
     border-radius: var(--borrad);
     border-bottom: 3px solid var(--darkbg);
     box-shadow: 2px 2px 8px;
-
+    background-color: var(--formbackground);
 }
 table tbody{
     background-color: var(--lightbg);
-    
 }
+
 td{
     padding:10px;
-    font-size: 1.5em;
 }
 tr:nth-child(odd){
-    background-color: var(--darkbglighttext);
+    background-color: var(--formbackground);
 
 }
 
 table span{
     font-size: 1rem;
     font-style: italic;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    background-color: var(--darkbg);
+    color: var(--formbackground);
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+}
+
+footer p{
+    margin: 0;
+    font-size: .9;
+    font-style: italic;
+}
+
+footer a{
+    color: var(--darkbglighttext);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover{
+    text-decoration: underline;
 }
