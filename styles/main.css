@@ -1,9 +1,9 @@
 :root{
-    --darkbg: #02036b;
-    --darkbglighttext: #ebfffd;
-    --lightbg: #d4feff;
-    --lighbgdarktext: #000033;
-    --shadowblue: #6c6dfb;
+    --darkbg: #ef7c24;
+    --darkbglighttext: #fff6f0;
+    --lightbg: #f4ab6c;
+    --lightbgdarktext: #000033;
+    --shadow: #dd1f13;
 
 
     --bgcolorone:#BF9E75;
@@ -109,7 +109,7 @@ nav li a{
     background-color: var(--darkbglighttext);
     border-radius: var(--borrad);
     padding: 8px;
-    box-shadow: 3px 3px 5px var(--lighbgdarktext);
+    box-shadow: 3px 3px 5px var(--shadow);
 }
 nav li a:hover{
     
@@ -137,14 +137,16 @@ h2{
     margin: auto;
 }
 
-.menu h2{
-    width:var(--menuwidth);
+#forms{
+    justify-content: left;
+
 }
 
 form{
     margin: 35px auto;
     border:1px solid var(--darkbg);
     border-radius: var(--borrad);
+
 }
 
 form input[type=submit]{
@@ -154,8 +156,9 @@ form input[type=submit]{
     background-color: var(--darkbglighttext);
     border-radius: var(--borrad);
     padding: 8px;
-    box-shadow: 3px 3px 5px var(--lighbgdarktext);
+    box-shadow: 3px 3px 5px var(--shadow);
     margin:10px;
+    border: 1px solid var(--shadow);
 }
 
 label{
@@ -164,23 +167,46 @@ label{
 }
 
 /*table styles*/
+.menu h2{
+    width:var(--menuwidth);
+    font-size: 2.5em;
+}
+
+.menu{
+margin-left: auto;
+}
+
 table{
-    border-collapse: collapse;
-    margin: auto;
+    margin-top: 25px;
     width: var(--menuwidth);
 }
 
 table thead{
     background-color: var(--darkbg);
-    color: var(--darkbglighttext);
-    height:2em;
+    color: var(--darkbg);
+    font-size:2em;
+    padding:100px;
+
+
+}
+
+th{
+    border-radius: var(--borrad);
+    border-bottom: 3px solid var(--darkbg);
+    box-shadow: 2px 2px 8px;
+
 }
 table tbody{
     background-color: var(--lightbg);
+    
 }
 td{
     padding:10px;
     font-size: 1.5em;
+}
+tr:nth-child(odd){
+    background-color: var(--darkbglighttext);
+
 }
 
 table span{
