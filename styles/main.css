@@ -131,10 +131,9 @@ nav li a:visited{
     grid-template-columns: 1fr 3fr;
     grid-auto-rows: auto;
     grid-template-areas: 
-    /*help*/
     "pickup menu menu"
     "pickup menu menu"
-    "pickup menu menu"
+    "pickup foodpic foodpic"
     "partyform foodpic foodpic";
 }
 
@@ -143,11 +142,15 @@ nav li a:visited{
 }
 
 .partyForm{
-    grid-area: partyform
+    grid-area: partyform;
 }
 
 .menu{
     grid-area: menu;
+}
+
+.foodPic{
+    grid-area: foodpic;
 }
 
 
@@ -311,15 +314,28 @@ table span{
     justify-content: space-evenly;
     display: flex;
     flex-direction: row;
-    gap: 20px;
     margin-bottom: 50px;
-    margin-top: -250px;
+    height: fit-content;
+    margin-top: -200px;
+}
+
+figure{
+    border: 1px solid black;
+    box-shadow: 1px 1px 3px var(--shadow);
+    border-radius: 3px;
+    border-top-right-radius: 18px;
 }
 
 .foodPic img{
     width: 15vw;
     height: 15vh;
-    
+    border-radius: 3px;
+    border-top-right-radius: 18px;
+}
+
+.foodPic figcaption{
+    text-align: center;
+    padding: 10px;
 }
 
 /*footer styling*/
