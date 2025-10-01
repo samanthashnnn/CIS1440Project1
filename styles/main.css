@@ -24,6 +24,21 @@
     box-sizing: border-box;
 }
 
+/*font*/
+.delius-regular {
+  font-family: "Delius", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+ @font-face {
+        font-family: 'lifelogo'; 
+        src: url('/resources/LifelogoEasy-0qvz.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal; 
+    }
+
+
 html{
     background-color: var(--darkbglighttext);
 }
@@ -65,11 +80,13 @@ header{
 
 header h1{
     font-size: 3em;
-    margin: 10px 0 0 0; 
+    font-family: "lifelogo";
+
 }
 
 header p{
     margin: 1px 0 0 0; 
+    font-family: "Delius";
     
 }
 
@@ -86,14 +103,17 @@ header img{
 nav{
     position:relative;
     z-index: 2;
-
+    font-family: "Delius";
 }
 
 nav ul{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    margin-top: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    gap: 10px;
 }
 
 nav li{
@@ -106,10 +126,10 @@ nav li a{
     text-decoration: none;
     color: var(--darkbg);
     font-weight: bolder;
-    font-size: 1.5em;
+    font-size: 1.25em;
     background-color: var(--formbackground);
     border-radius: var(--borrad);
-    padding: 8px;
+    padding: 12px;
     box-shadow: 3px 3px 5px var(--shadow);
 }
 nav li a:hover{
@@ -122,6 +142,12 @@ nav li a:visited{
 }
 
 /*body styles*/
+main{
+    font-family: "Delius";
+    margin-top: 30px;
+    
+}
+
 .index{
     width: var(--mainwidth);
     gap: 20px;
@@ -179,11 +205,6 @@ h2{
     margin: 10px;
 }
 
-
-
-
-
-
 /*form styling*/
 .forms{
     width: 28vw;
@@ -222,6 +243,7 @@ form input[type=submit] {
     box-shadow: 3px 3px 5px var(--shadow);
     margin: 15px ;
     border: 1px solid var(--shadow);
+    font-family: "Delius";
 }
 
 form input[type=submit]:hover {
@@ -233,10 +255,15 @@ form input[type=checkbox]:hover{
     box-shadow: 1px 1px 3px var(--shadow);
 }
 
-form label input{
+form label input, textarea{
     background-color: var(--darkbglighttext);
     border-radius: var(--borrad);
     border: 1px solid var(--shadow);
+}
+
+textarea{
+    padding: 10px;
+    margin:10px;
 }
 
 /*not what I was looking for*/
