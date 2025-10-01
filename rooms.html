@@ -26,20 +26,55 @@
                 </ul>
             </nav>
         </header>
-        <main>
-            <section id="rules">
+        <main class="partyRulesBody">
+            <section class="partyForm forms" >
+                    <form action="#" method="post">
+                    
+                            <h2>schedule a party</h2>
+                            <label>
+                                name:
+                                <input type="text" id="name" required>
+                            </label>
+                            <label>
+                                email:
+                                <input type="email" id="email" required>
+                            </label>
+                            <label>
+                                party time:
+                                <!--date & time picker-->
+                                <input type="datetime-local">
+                            </label>
+                            <label>
+                                number in party:
+                                <!-- dropdown-->
+                                <input type="number" min="5" max="45">
+                            </label>
+                            <label>
+                                theme request:
+                                <input type="text">
+                            </label>
+                            <label name="rulesCheck">
+                                <!--checkbox-->
+                                <input type="checkbox" required>
+                                i have read and agree to the <a href="rooms.html"> party rules</a> (listed above)
+                            </label>
+                            <input type="submit" value="party!">
+                    </form>
+                </section>
+                            <section id="rules">
                 <h2>Party Room Rules</h2>
-                <ul>
+                <ol>
                     <li>Must be over 18 years of age to reserve party room</li>
                     <li>Room must be reserved at least 5 buisness days in advance</li>
                     <li>No changes in themes or decor less than 24 hours before party starts</li>
                     <li>No live entertainment or sound equipment in the room</li>
                     <li>Guests (including party hosts) must be out of the room no later 30 minutes before close</li>
-                </ul>
+                    <li>No outside food or drink</li>
+                </ol>
             </section>
         </main>
         <footer>
-            <p><a href="index.html">&copy; 2025 The Darling Brew</a> | <a href="contact.html">Contact</a> | <a href="rooms.html">Room Policy</a></p>
+            <p>&copy; 2025<a href="index.html">The Darling Brew</a> | <a href="contact.html">Contact</a> | <a href="rooms.html">Room Policy</a></p>
         </footer>
     </body>
 </html>
