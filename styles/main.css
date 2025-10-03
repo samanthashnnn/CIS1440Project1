@@ -1,30 +1,40 @@
 :root{
-    --darkbg: #ef7c24;
-    --darkbglighttext: #fff6f0;
-    --lightbg: #f4ab6c;
-    --lightbgdarktext: #000033;
-    --shadow: #dd1f13; 
-    --formbackground: #fffcfa;
+    /*colors*/
+    --bg: #ef7c24;
+    --bgmid: #f4ab6c;
+    --bgform: #fffcfa;
+    --text: #fff6f0;
+    --shadow: #dd1f13;
 
+    /*border-radius*/
+    --borradlarge: 30px;
+    --borradmid: 12px;
+    --borradsmall: 3px;
+    
+    /*width*/
+    --w80: 80vw;
+    --w50: 50vw;
+    --w20: 20vw;
 
-    --bgcolorone:#BF9E75;
-    --bgcolortwo: #F2E0BD;
-    --lightblue:#6DA6A0;
-    --textcolor:#0D0D0D;
+    /*margin*/ 
+    --m25: 25px;
+    --m5: 5px;
 
-    --borrad:30px;
-    --mainwidth:80vw;
-    --menuwidth:50vw;
+    /*photo sizing*/
+    --photo: 150px;
+
+    --boxshadow: 1px 1px 3px var(--shadow);
+    --border1: 1px solid var(--shadow);
 }
 
-
+/*reset*/
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing:border-box
 }
 
-/*font*/
+/*fonts*/
 .delius-regular {
   font-family: "Delius", cursive;
   font-weight: 400;
@@ -32,362 +42,303 @@
 }
 
  @font-face {
-        font-family: 'lifelogo'; 
-        src: url('/resources/LifelogoEasy-0qvz.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal; 
-    }
-
-
-html{
-    background-color: var(--darkbglighttext);
+    font-family: 'lifelogo'; 
+    src: url('/resources/LifelogoEasy-0qvz.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal; 
 }
 
-body{
-    width:100%;
-    margin: 24px auto;
-}
 
 
 /*header styles*/
 header{
-    width: var(--mainwidth);
+    background-image: url('../images/logo.png');
+    background-repeat: no-repeat;
+    background-position: 27% 0;
+    background-size: 350px;
+    min-height: 250px;
+    width: var(--w80);
     margin: auto;
-    height: 200px;
-    position: relative;
+    margin-top: 4vh;
+    padding-top: 5vh;
 }
 
-.header{
-    display: flex;
-    justify-content: center;
-    width: 70vw;
-    margin: 0 0 0 auto;
-}
-
-.heading{
-    background-color: var(--darkbg);
-    color: var(--darkbglighttext);
-    height: 100px;
-    margin-top: 2%;
+.title{
+    width: var(--w50);
+    background-color: var(--bg);
+    color: var(--text);
     text-align: right;
-    width:100%;
-    padding-right: 35px;
-    padding-bottom: 0;
-    border-top-right-radius: var(--borrad);
-    border-bottom-right-radius: var(--borrad);
-    z-index: 0;
+    border-radius: var(--borradlarge) ;
+    padding: var(--m25);
+    margin: 0 4vw auto auto;
+    position: relative;
+    z-index: -1;
 }
 
-header h1{
+.title p{
+  font-family: "Delius", cursive;
+}
+
+h1{
     font-size: 3em;
     font-family: "lifelogo";
-
 }
 
-header p{
-    margin: 1px 0 0 0; 
-    font-family: "Delius";
-    
+h2, h3{
+    font-family: "lifelogo";
 }
 
-header img{
-    width: 250px;
-    height: auto;
+#logo{
+    width: 350px;
     position: absolute;
-    right: 70%;
-    top: -10%;
-    z-index: 1;
-}
-
-/*nav in header*/
-nav{
-    position:relative;
-    z-index: 2;
-    font-family: "Delius";
+    left: 3vw;
+    
 }
 
 nav ul{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    margin-top: 30px;
-    margin-bottom: 30px;
-
-    gap: 10px;
+    margin: 2vh 4vw auto auto;
 }
 
 nav li{
     list-style-type: none;
-    margin-left: 5px;
-    
 }
 
 nav li a{
     text-decoration: none;
-    color: var(--darkbg);
-    font-weight: bolder;
-    font-size: 1.25em;
-    background-color: var(--formbackground);
-    border-radius: var(--borrad);
-    padding: 12px;
-    box-shadow: 3px 3px 5px var(--shadow);
+    background-color: var(--bgform);
+    color: var(--bg);
+    font-weight: bold;
+    font-size: 1.5em;
+    border: 1px solid var(--bg);
+    border-radius: var(--borradmid);
+    box-shadow: var(--boxshadow);
+    padding: var(--m5);
+    margin: var(--m25);
 }
+
 nav li a:hover{
     background-color: var(--shadow);
-    color: var(--formbackground);
-    
+    color: var(--text);
+    border: var(--border1);
 }
+
 nav li a:visited{
-    
+    font-weight: bolder;
+    color: var(--shadow);
 }
 
 /*body styles*/
-main{
-    font-family: "Delius";
-    margin-top: 30px;
-    
+body{
+    background-color: var(--text);
+    font-family: "Delius", cursive;
 }
 
-.index{
-    width: var(--mainwidth);
-    gap: 20px;
+ /*grid setup*/
+.indexMain{
+    width: var(--w80);
     margin: auto;
-    margin-top: 30px;
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-auto-rows: auto;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     grid-template-areas: 
-    "pickup menu menu"
-    "pickup menu menu"
-    "pickup foodpic foodpic"
-    "partyform foodpic foodpic";
+    "forms forms menu menu menu menu menu"
+    "forms forms menu menu menu menu menu"
+    "forms forms menu menu menu menu menu"
+    "forms forms menu menu menu menu menu"
+    "forms forms foodpic foodpic foodpic foodpic foodpic"
+    "forms forms foodpic foodpic foodpic foodpic foodpic";
+    gap: 10px;
 }
 
-#pickup{
-    grid-area: pickup;
-}
+.forms{
+    grid-area: forms;
+}   
 
-.partyForm{
-    grid-area: partyform;
-}
-
-.menu{
+#menu{
     grid-area: menu;
+}
+
+#menu table {
+  min-width: 100%;
+  max-width: 100%;
 }
 
 .foodPic{
     grid-area: foodpic;
+    display: flex;
+    justify-content: space-around;
 }
-
 
 h2{
-    background-color: var(--darkbg);
-    color: var(--darkbglighttext);
-    padding: .75em;
+    background-color: var(--bg);
+    color: var(--text);
     text-align: center;
-    border-radius: var(--borrad);
-    margin: auto;
+    width: fit-content;
+    padding: 10px;
+    border-radius: var(--borradmid);
 }
 
-/*room rules exclusive*/
-.partyRulesBody{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    width: 75vw;
-    margin: auto;
-}
-
-.partyRulesBody ol{
-    padding: 25px;
-}
-
-.partyRulesBody li{
-    margin: 10px;
-}
-
-/*form styling*/
-.forms{
-    width: 28vw;
-    margin: auto;
-    margin-bottom: 30px;
-}
-
+/*form styles*/
 form{
-    margin: 35px 0;
-    border:4px double var(--darkbg);
-    border-radius: var(--borrad);
-    background-color: var(--formbackground);
+    border: 5px double var(--bg);
+    border-radius: var(--borradmid);
+    background-color: var(--bgform);
+    padding: var(--m25);
+    margin: var(--m25) 0;
+    display: grid;
 }
 
 form h2{
-    margin:12px auto;
+    margin: auto;
     width: fit-content;
+    margin-top: -6vh;
+}
 
+label{
+    display: block;
+    margin:10px 0;
 }
 
 #bookSelection{
-    background-color: var(--darkbglighttext);
-    width:fit-content;
+    background-color: var(--text);
+    width: fit-content;
     margin: auto;
-    border: 1px solid var(--shadow);
-    border-radius: var(--borrad);
+    padding: var(--m5);
+    border: var(--border1);
+    border-radius: var(--borradsmall);
+    display: inline-block;
 }
 
-form input[type=submit] {
-       color: var(--darkbg);
-    font-weight: bolder;
-    font-size: 1em;
-    background-color: var(--darkbglighttext);
-    border-radius: var(--borrad);
-    padding: 12px;
-    box-shadow: 3px 3px 5px var(--shadow);
-    margin: 15px ;
-    border: 1px solid var(--shadow);
+form input[type=submit]{
+    font-family: "lifelogo";
+    cursor: pointer;
+    background-color: var(--text);
+    color: var(--bg);
+    border: var(--border1);
+    border-radius: var(--borradmid);
+    box-shadow: 2px 2px 4px var(--shadow);
     font-family: "Delius";
+    font-weight: bolder;
+    padding: 15px;
+    margin: 15px auto;
 }
 
 form input[type=submit]:hover {
+    font-family: "lifelogo";
     background-color: var(--shadow);
-    color: var(--formbackground);
+    color: var(--bgform);
 }
 
-form input[type=checkbox]:hover{
+form input[type=checkbox]:hover, form input[type=radio]:hover{
     box-shadow: 1px 1px 3px var(--shadow);
 }
 
 form label input, textarea{
-    background-color: var(--darkbglighttext);
-    border-radius: var(--borrad);
-    border: 1px solid var(--shadow);
+    background-color: var(--text);
+    border: var(--border1);
+    border-radius: var(--borradsmall);
 }
 
 textarea{
     padding: 10px;
-    margin:10px;
-}
-
-/*not what I was looking for*/
-form label input:active form label input:focus{
-    border-color: var(--shadow);
+    margin: 10px;
 }
 
 label[name="rulesCheck"]{
     font-style: italic;
 }
 
-label{
-    display: block;
-    margin: 20px;
-}
-
-.forms h2{
-   margin-top: -3vh; 
-}
-
-/*contact exclusive form styling*/
+/*contact form page*/
 .contact form{
     width: 50vw;
     margin: auto;
 }
 
 /*table styles*/
-.menu h2{
-    width:var(--menuwidth);
-    font-size: 2.5em;
-}
-
-.menu{
-margin-left: auto;
-margin-top: 35px;
-}
-
-table{
-    margin-top: 25px;
-    width: var(--menuwidth);
+#menu h2{
+    font-size: 2em;
+    margin: auto;
 }
 
 table thead{
-    color: var(--darkbg);
-    font-size:2em;
-    padding:100px;
+    color: var(--bg);
+    font-size: 2em;
 }
 
 th{
-    border-radius: var(--borrad);
-    border-bottom: 3px solid var(--darkbg);
-    box-shadow: 2px 2px 8px;
-    background-color: var(--formbackground);
+    background-color: var(--bgform);
+    border-bottom: var(--border1);
+    border-radius: var(--borradlarge);
+    box-shadow: var(--boxshadow);
 }
+
 table tbody{
-    background-color: var(--lightbg);
+    background-color: var(--bgmid);
+}
+
+tr:nth-child(odd){
+    background-color: var(--bgform);
 }
 
 td{
-    padding:10px;
-}
-tr:nth-child(odd){
-    background-color: var(--formbackground);
-
+    padding:var(--m5);
 }
 
 table span{
-    font-size: 1rem;
     font-style: italic;
 }
 
-/*image styling*/
-.foodPic {
-    grid-area: foodpic;
-    justify-content: space-evenly;
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 50px;
-    height: fit-content;
-    margin-top: -200px;
+.featured{
+    font-weight: bold;
 }
 
+/*image styling*/
 figure{
-    border: 1px solid black;
-    box-shadow: 1px 1px 3px var(--shadow);
-    border-radius: 3px;
-    border-top-right-radius: 18px;
+    border: var(--border1);
+    border-top-left-radius: var(--borradmid);
+    border-top-right-radius: var(--borradlarge);
+    height: fit-content;
 }
 
 .foodPic img{
-    width: 15vw;
-    height: 15vh;
-    border-radius: 3px;
-    border-top-right-radius: 18px;
+    width: var(--photo);
+    height: var(--photo);
+    object-fit: cover;
+    border-top-left-radius: var(--borradmid);
+    border-top-right-radius: var(--borradlarge);
 }
 
 .foodPic figcaption{
     text-align: center;
-    padding: 10px;
+    margin: 10px 0;
 }
 
-/*footer styling*/
 footer{
-    width: 100%;
-    text-align: center;
-    background-color: var(--darkbg);
-    color: var(--formbackground);
-    padding: 20px;
+    background-color: var(--bg);
+    color: var(--bgform);
+    width: var(--w50);
+    padding: var(--m25);
+    border-top-left-radius: var(--borradlarge);
+    border-top-right-radius: var(--borradlarge);
     position: fixed;
     bottom: 0;
-    left: 0;
+    right: 0;
     z-index: 5;
 }
 
 footer p{
-    margin: 0;
-    font-size: .9;
-    font-style: italic;
+    font-size: .9em;
+    text-align: center;
 }
 
 footer a{
-    color: var(--darkbglighttext);
+    color: var(--text);
+    padding: var(--m5);
     text-decoration: none;
-    margin: 0 10px;
+    font-style: italic;
 }
 
 footer a:hover{
