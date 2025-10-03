@@ -123,11 +123,11 @@ nav li a:hover{
     background-color: var(--shadow);
     color: var(--text);
     border: var(--border1);
+    font-family: "lifelogo";
 }
 
 nav li a:visited{
     font-weight: bolder;
-    color: var(--shadow);
 }
 
 /*body styles*/
@@ -257,10 +257,23 @@ label[name="rulesCheck"]{
 }
 
 /*contact form page*/
-.contact{
-    display: flex;
-    width: var(--w50);
+.contact form{
     margin: auto;
+    width: 40vw;
+}
+
+/*rules page styles*/
+.partyPageMain{
+    display: flex;
+    flex-direction: row;
+    width: var(--w80);
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.partyPageMain form, .partyPageRules{
+    width: 40vw;
+    margin: var(--m25);
 }
 
 /*table styles*/
