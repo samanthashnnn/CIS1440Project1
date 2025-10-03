@@ -153,6 +153,11 @@ body{
     gap: 10px;
 }
 
+main{
+    
+    margin: 70px auto 100px auto;
+}
+
 .forms{
     grid-area: forms;
 }   
@@ -252,8 +257,9 @@ label[name="rulesCheck"]{
 }
 
 /*contact form page*/
-.contact form{
-    width: 50vw;
+.contact{
+    display: flex;
+    width: var(--w50);
     margin: auto;
 }
 
